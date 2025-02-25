@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ici on clear et on reassigne notre layout, on ajoute android et tools-->
+<!-- mettre en place un wrapper(android:orientation) -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    >
+
+    <!-- Ici on ajoute notre TextView -->
+    <!-- Adapter hauteur au contenu du text view-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bienvenue dans mon premier projet Android/KOTLIN"
+        android:layout_marginBottom="10sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sous titre "
+        />
+
+</LinearLayout>
