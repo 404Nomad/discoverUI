@@ -2,7 +2,26 @@
 <resources>
     <!-- Style du titre-->
     <style name="titre">
-
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@color/purple</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">36dp</item>
+        <!-- de 100 a 900 pour le fontweight-->
+        <item name="android:fontWeight">600</item>
     </style>
+
+    <style name="SousTitre">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="btn">
+        <item name="android:layout_marginStart">3dp</item>
+        <item name="android:layout_marginEnd">3dp</item>
+    </style>
+
+
 
 </resources>
