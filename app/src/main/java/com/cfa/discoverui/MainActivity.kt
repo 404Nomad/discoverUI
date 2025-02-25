@@ -1,9 +1,11 @@
 package com.cfa.discoverui
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -34,5 +36,24 @@ class MainActivity : AppCompatActivity() {
             i++
         }
 
+        // set mon champ reponse et btn3
+        findViewById<Button>(R.id.btn3).setOnClickListener {
+            reponse.text = ""
+            // re instancier compteur a zero
+            i = 0
+            Toast.makeText(this,
+                "Un super message et un reset du champ reponse",
+                Toast.LENGTH_LONG).show()
+        }
+
+        // definir classe de destination
+        // definir des informations a envoyer a cette activité
+        findViewById<Button>(R.id.btn).setOnClickListener {
+            val intent = Intent(this, secondActivity::class.java )
+            intent.putExtra("nom", "CFA")
+            intent.putExtra("date", "25/02/2025")
+            intent.putExtra("user", "Pierre")
+            startActivity(intent)
+        }
     }
 }
