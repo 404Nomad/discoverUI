@@ -2,14 +2,21 @@
     <!-- Ici on clear et on reassigne notre layout, on ajoute android et tools-->
     <!-- mettre en place un wrapper(android:orientation) -->
 <LinearLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-
-android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Mon Application"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
 
 <!-- Ici on ajoute notre TextView -->
 <!-- Adapter hauteur au contenu du text view-->

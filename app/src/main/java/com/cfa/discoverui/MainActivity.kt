@@ -1,25 +1,57 @@
 package com.cfa.discoverui
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-
 class MainActivity : AppCompatActivity() {
 
     // taglog pour tracer ce que l'on fait, dans le logcat (Tests et checks)
     val TAG = MainActivity::class.java.simpleName
 
+    //::surcharger une méthode qui appartient a AppCompatActivity
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.action_add -> {
+                return super.onOptionsItemSelected(item)
+            }
+            R.id.action_supp -> {
+                return super.onOptionsItemSelected(item)
+            }
+            R.id.action_show -> {
+                val intent = Intent(this, secondActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
         // r pour Res
         var titre:TextView = findViewById<TextView>(R.id.titreActivity)
@@ -55,5 +87,8 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("user", "Pierre")
             startActivity(intent)
         }
+
+
+
     }
 }

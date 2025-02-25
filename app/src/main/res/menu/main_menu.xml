@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <!-- always permet -->
+    <item android:id="@+id/action_add"
+        android:title="Ajouter"
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_add_box_black_18dp"
+        />
+    <item android:id="@+id/action_supp"
+        android:title="Supprimer"
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_delete_black_18dp"
+        />
+    <item android:id="@+id/action_show"
+        android:title="Voir"
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_visibility_black_18dp"
+        />
+</menu>
