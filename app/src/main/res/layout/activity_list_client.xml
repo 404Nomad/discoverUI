@@ -21,10 +21,9 @@
         android:layout_width="401dp"
         android:layout_height="585dp"
         android:layout_margin="5dp"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="70dp"
-        tools:listitem="@layout/card"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints"
-        />
+        tools:layout_editor_absoluteX="5dp"
+        tools:listitem="@layout/card" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
