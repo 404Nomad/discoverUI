@@ -6,16 +6,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ListClientActivity">
-
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Mon Application"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:ignore="MissingConstraints"
+        />
     <!-- on va ajouter un recyclerview pour afficher nos clients -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_client"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="401dp"
+        android:layout_height="585dp"
         android:layout_margin="5dp"
-        tools:layout_editor_absoluteX="-7dp"
-        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="70dp"
         tools:listitem="@layout/card"
+        tools:ignore="MissingConstraints"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

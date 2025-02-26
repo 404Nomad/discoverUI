@@ -31,7 +31,9 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.action_add -> {
-                return super.onOptionsItemSelected(item)
+                val intent = Intent(this, ClientFormActivity::class.java)
+                startActivity(intent)
+                return true
             }
             R.id.action_supp -> {
                 return super.onOptionsItemSelected(item)
@@ -76,6 +78,11 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,
                 "Un super message et un reset du champ reponse",
                 Toast.LENGTH_LONG).show()
+        }
+
+        findViewById<Button>(R.id.btn2).setOnClickListener {
+            val intent = Intent(this, ListClientActivity::class.java)
+            startActivity(intent)
         }
 
         // definir classe de destination
